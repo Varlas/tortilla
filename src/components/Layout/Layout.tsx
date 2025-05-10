@@ -2,6 +2,32 @@ import styles from './Layout.module.css';
 import tortilla2 from '../../assets/tortilla2.jpeg';
 import tortilla1 from '../../assets/tortilla1.webp';
 import canadio from '../../assets/canadio.webp';
+import { BoxItem } from '../BoxItem/BoxItem';
+
+const topItems = [
+	{
+		image: tortilla2,
+		title: 'Recomendaciones',
+		alt: 'Recomendaciones',
+		extraClass: styles.box6,
+	},
+	{
+		image: tortilla1,
+		title: 'Articulos',
+		alt: 'articulos',
+		extraClass: styles.box7,
+	},
+];
+
+const bottomItems = [
+	{
+		image: tortilla1,
+		title: 'Normas',
+		alt: 'Normas',
+		extraClass: styles.box8,
+	},
+	{ image: tortilla2, title: 'Mapa', alt: 'Mapa', extraClass: styles.box9 },
+];
 
 export const Layout: React.FC = () => {
 	return (
@@ -18,32 +44,14 @@ export const Layout: React.FC = () => {
 				</div>
 				<div className={styles.main}>
 					<div className={styles.topRow}>
-						<div className={`${styles.box} ${styles.box6}`}>
-							<img src={tortilla2} alt="Normas" />
-							<div className={styles.overlay}>
-								<h1>Recomiéndame una tortilla</h1>
-							</div>
-						</div>
-						<div className={`${styles.box} ${styles.box7}`}>
-							<img src={tortilla1} alt="Artículos" />
-							<div className={styles.overlay}>
-								<h1>Artículos</h1>
-							</div>
-						</div>
+						{topItems.map((item, i) => (
+							<BoxItem key={i} {...item} />
+						))}
 					</div>
 					<div className={styles.bottomRow}>
-						<div className={`${styles.box} ${styles.box8}`}>
-							<img src={tortilla1} alt="Extra 1" />
-							<div className={styles.overlay}>
-								<h1>Normas</h1>
-							</div>
-						</div>
-						<div className={`${styles.box} ${styles.box9}`}>
-							<img src={tortilla2} alt="Extra 2" />
-							<div className={styles.overlay}>
-								<h1>Mapa</h1>
-							</div>
-						</div>
+						{bottomItems.map((item, i) => (
+							<BoxItem key={i} {...item} />
+						))}
 					</div>
 				</div>
 			</div>
