@@ -17,7 +17,7 @@ export const Layout: React.FC = () => {
 					<div className={`${styles.box} ${styles.box6}`}>
 						<img src={tortilla2} alt="Normas" />
 						<div className={styles.overlay}>
-							<h1>Normas</h1>
+							<h1>Recomiéndame una tortilla</h1>
 						</div>
 					</div>
 					<div className={`${styles.box} ${styles.box7}`}>
@@ -31,13 +31,13 @@ export const Layout: React.FC = () => {
 					<div className={`${styles.box} ${styles.box8}`}>
 						<img src={tortilla1} alt="Extra 1" />
 						<div className={styles.overlay}>
-							<h1>Extra 1</h1>
+							<h1>Normas</h1>
 						</div>
 					</div>
 					<div className={`${styles.box} ${styles.box9}`}>
 						<img src={tortilla2} alt="Extra 2" />
 						<div className={styles.overlay}>
-							<h1>Extra 2</h1>
+							<h1>Mapa</h1>
 						</div>
 					</div>
 				</div>
