@@ -1,0 +1,52 @@
+.articleContainer {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .articleContainer img {
+    width: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+    max-height: 400px;
+  }
+  
+  .articleContainer h1 {
+    font-size: 2rem;
+    color: #222;
+    text-align: center;
+  }
+  
+  .articleContainer p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    white-space: pre-line;
+  }
+  
+  .backButton {
+    align-self: center;
+    padding: 0.5rem 1rem;
+    background-color: #a0c4ff;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .backButton:hover {
+    background-color: #89b0f0;
+  }
+  
+  .notFound {
+    text-align: center;
+    padding: 2rem;
+  }
+  

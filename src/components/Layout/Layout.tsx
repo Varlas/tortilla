@@ -16,6 +16,7 @@ const topItems = [
 		title: 'Articulos',
 		alt: 'articulos',
 		extraClass: styles.box7,
+		link: '/articulos', // NUEVO
 	},
 ];
 

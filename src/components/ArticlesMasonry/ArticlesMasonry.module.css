@@ -1,0 +1,52 @@
+.masonryWrapper {
+    padding: 1rem;
+  }
+  
+  .myMasonryGrid {
+    display: flex;
+    margin-left: -1rem; /* espacio entre columnas */
+    width: auto;
+  }
+  
+  .myMasonryGridColumn {
+    padding-left: 1rem;
+    background-clip: padding-box;
+  }
+  
+  .masonryItem {
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .masonryItem:hover {
+    transform: scale(1.02);
+  }
+  
+  .masonryItem img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+  
+  /* Algunas alturas aleatorias para el efecto tipo Pinterest */
+  .masonryItem img:nth-child(1n) {
+    height: auto;
+    max-height: 320px;
+  }
+  
+  .titleOverlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+  }
+  
