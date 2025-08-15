@@ -3,6 +3,7 @@ import { Layout } from './components/Layout/Layout';
 import { ArticlesMasonry } from './components/ArticlesMasonry/ArticlesMasonry';
 import './App.css';
 import { ArticleDetail } from './components/ArticleDetail/ArticleDetail';
+import { Rules } from './components/Rules/Rules';
 
 function App() {
 	return (
@@ -11,6 +12,7 @@ function App() {
 				<Route path="/" element={<Layout />} />
 				<Route path="/articulos" element={<ArticlesMasonry />} />
 				<Route path="/articulo/:id" element={<ArticleDetail />} />
+				<Route path="/normas" element={<Rules />} />
 			</Routes>
 		</Router>
 	);

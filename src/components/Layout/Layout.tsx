@@ -26,6 +26,7 @@ const bottomItems = [
 		title: 'Normas',
 		alt: 'Normas',
 		extraClass: styles.box8,
+		link: '/normas',
 	},
 	{ image: tortilla2, title: 'Mapa', alt: 'Mapa', extraClass: styles.box9 },
 ];
