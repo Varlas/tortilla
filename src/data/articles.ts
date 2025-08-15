@@ -7,20 +7,31 @@ export const articles = [
 		title: 'Historia de la Tortilla',
 		image: img1,
 		content: `
-La tortilla de patatas, también conocida como tortilla española, es uno de los platos más emblemáticos de la gastronomía española. Su origen se remonta al siglo XIX, cuando comenzó a popularizarse como una comida nutritiva y asequible.
+La tortilla de patatas es el alma de muchos hogares y bares en España. Su historia es tan rica como su sabor...
 
-Hoy en día, cada región tiene su propia versión y es motivo de debate nacional si lleva o no cebolla...
-		`,
+Durante el siglo XIX, se convirtió en un símbolo de la cocina humilde pero sabrosa.
+`,
+		keyPoints: {
+			fecha: '2025-07-01',
+			cuajada: 'Sin cuajar',
+			cebolla: 'Con cebolla',
+			local: 'Bar La Pequeña',
+		},
 	},
 	{
 		id: '2',
 		title: 'Recetas Tradicionales',
 		image: img2,
 		content: `
-Para una tortilla clásica se necesitan pocos ingredientes: huevos, patatas, sal y, opcionalmente, cebolla.
+Esta receta es un clásico. Solo necesitas huevos, patata, sal y aceite de oliva.
 
-El secreto está en la técnica y el punto de cocción. Algunos chefs prefieren dejarla jugosa en el centro, mientras que otros optan por una textura más firme.
-		`,
+¿El truco? La paciencia, y dejar que cada ingrediente brille.
+`,
+		keyPoints: {
+			fecha: '2025-06-15',
+			cuajada: 'Poco cuajada',
+			cebolla: 'Sin cebolla',
+			local: 'Casa Pepe',
+		},
 	},
-	// Añade más artículos aquí
 ];
