@@ -1,0 +1,15 @@
+.mapaArticulos {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.mapaArticulos h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  color: #333;
+}

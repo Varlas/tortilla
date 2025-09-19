@@ -3,6 +3,7 @@ import tortilla2 from '../../assets/tortilla2.jpeg';
 import tortilla1 from '../../assets/tortilla1.webp';
 import canadio from '../../assets/canadio.webp';
 import { BoxItem } from '../BoxItem/BoxItem';
+import { useNavigate } from 'react-router-dom';
 
 const topItems = [
 	{
@@ -10,13 +11,14 @@ const topItems = [
 		title: 'Recomendaciones',
 		alt: 'Recomendaciones',
 		extraClass: styles.box6,
+		link: '/selector',
 	},
 	{
 		image: tortilla1,
 		title: 'Articulos',
 		alt: 'articulos',
 		extraClass: styles.box7,
-		link: '/articulos', // NUEVO
+		link: '/articulos',
 	},
 ];
 
@@ -28,10 +30,21 @@ const bottomItems = [
 		extraClass: styles.box8,
 		link: '/normas',
 	},
-	{ image: tortilla2, title: 'Mapa', alt: 'Mapa', extraClass: styles.box9 },
+	{
+		image: tortilla2,
+		title: 'Mapa',
+		alt: 'Mapa',
+		extraClass: styles.box9,
+		link: '/map',
+	},
 ];
 
 export const Layout: React.FC = () => {
+	const navigate = useNavigate();
+
+	const handleClick = (link: string) => {
+		if (link) navigate(link);
+	};
 	return (
 		<div className={styles.container}>
 			<div className={styles.header}>
@@ -40,10 +53,15 @@ export const Layout: React.FC = () => {
 			<div className={styles.content}>
 				<div className={styles.sidebar}>
 					<img src={canadio} alt="Ranking" />
-					<div className={styles.sidebarOverlay}>
+					<div
+						className={styles.sidebarOverlay}
+						onClick={() => handleClick('/ranking')}
+						style={{ cursor: 'pointer' }}
+					>
 						<h1>Ranking</h1>
 					</div>
 				</div>
+
 				<div className={styles.main}>
 					<div className={styles.topRow}>
 						{topItems.map((item, i) => (

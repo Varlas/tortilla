@@ -1,0 +1,67 @@
+.tortillaSelector {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.tortillaSelector h1 {
+  text-align: center;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.filtroGrupo {
+  margin-bottom: 1.5rem;
+}
+
+.filtroGrupo h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: #555;
+}
+
+.botonesGrupo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filtroBoton {
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.filtroBoton:hover {
+  background-color: #e0e0e0;
+}
+
+.filtroBoton.activo {
+  background-color: #A0C4FF;
+  color: white;
+}
+
+.recomendarBoton {
+  margin-top: 2rem;
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #BDB2FF;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.recomendarBoton:hover {
+  background-color: #a99de8;
+}
