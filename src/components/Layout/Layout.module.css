@@ -95,6 +95,8 @@
 
 .box:hover img {
   transform: scale(1.1);
+  filter: brightness(0.3); /* oscurecer */
+  transition: transform 0.3s ease, filter 0.3s ease; /* animación suave */
 }
 
 /* Overlay para el texto */
@@ -108,6 +110,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   z-index: 2;
 }
 
@@ -119,7 +122,52 @@
   padding: 0 0.5rem;
   word-break: break-word;
   max-width: 90%;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
+
+.overlay:hover h1 {
+  transform: scale(1.1);
+}
+
+/* Con esto conseguimos las dos barras laterales en el texto*/
+.overlay p {
+  position: relative;              /* necesario para posicionar los pseudoelementos */
+  color: #fff;
+  font-size: clamp(1rem, 2vw, 2rem);
+  padding: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.overlay p::before,
+.overlay p::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 0;                       /* empieza sin ancho */
+  height: 2px;                    /* grosor de la línea */
+  background: #ffc60c;            /* color de la raya */
+  transition: width 0.3s ease;
+}
+
+.overlay p::before {
+  left: 0;                        /* a la izquierda */
+  transform: translate(-110%, -50%); /* mueve la línea afuera del texto */
+}
+
+.overlay p::after {
+  right: 0;                       /* a la derecha */
+  transform: translate(110%, -50%);
+}
+
+.overlay:hover p {
+  color: #ffc60c;
+}
+
+.overlay:hover p::before,
+.overlay:hover p::after {
+  width: 30px; /* largo de la raya al hacer hover */
+}
+
 
 /* Colores de fallback */
 .box6 { background-color: #9BF6FF; }

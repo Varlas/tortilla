@@ -31,6 +31,7 @@ export const BoxItem: React.FC<BoxItemProps> = ({
 			<img src={image} alt={alt} />
 			<div className={styles.overlay}>
 				<h1>{title}</h1>
+				<p>Ver más</p>
 			</div>
 		</div>
 	);
