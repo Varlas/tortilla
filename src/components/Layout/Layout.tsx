@@ -51,17 +51,16 @@ export const Layout: React.FC = () => {
 				<h1>Un pincho de tortilla, por favor</h1>
 			</div>
 			<div className={styles.content}>
-				<div className={styles.sidebar}>
-					<img src={canadio} alt="Ranking" />
-					<div
-						className={styles.sidebarOverlay}
-						onClick={() => handleClick('/ranking')}
-						style={{ cursor: 'pointer' }}
-					>
-						<h1>Ranking</h1>
-					</div>
-				</div>
+				{/* LATERAL IZQUIERDO */}
+				<BoxItem
+					image={canadio}
+					title="Ranking"
+					alt="Ranking"
+					link="/ranking"
+					extraClass={styles.sidebar}
+				/>
 
+				{/* CONTENIDO PRINCIPAL */}
 				<div className={styles.main}>
 					<div className={styles.topRow}>
 						{topItems.map((item, i) => (
@@ -77,4 +76,6 @@ export const Layout: React.FC = () => {
 			</div>
 		</div>
 	);
+
+
 };
