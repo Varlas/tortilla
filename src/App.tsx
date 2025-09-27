@@ -16,7 +16,7 @@ function App() {
 				<Route path="/" element={<Layout />} />
 				<Route path="/articulos" element={<ArticlesMasonry />} />
 				<Route path="/articulo/:id" element={<ArticleDetail />} />
-				<Route path="/normas" element={<Rules />} />
+				<Route path="/about" element={<Rules />} />
 				<Route path="/ranking" element={<Ranking />} />
 				<Route path="/selector" element={<TortillaSelector />} />
 				<Route path="/bar" element={<BarCard />} />

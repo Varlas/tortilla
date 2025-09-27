@@ -3,7 +3,6 @@ import tortilla2 from '../../assets/tortilla2.jpeg';
 import tortilla1 from '../../assets/tortilla1.webp';
 import canadio from '../../assets/canadio.webp';
 import { BoxItem } from '../BoxItem/BoxItem';
-import { useNavigate } from 'react-router-dom';
 
 const topItems = [
 	{
@@ -25,10 +24,10 @@ const topItems = [
 const bottomItems = [
 	{
 		image: tortilla1,
-		title: 'Normas',
+		title: 'Sobre el proyecto',
 		alt: 'Normas',
 		extraClass: styles.box8,
-		link: '/normas',
+		link: '/about',
 	},
 	{
 		image: tortilla2,
@@ -40,11 +39,6 @@ const bottomItems = [
 ];
 
 export const Layout: React.FC = () => {
-	const navigate = useNavigate();
-
-	const handleClick = (link: string) => {
-		if (link) navigate(link);
-	};
 	return (
 		<div className={styles.container}>
 			<div className={styles.header}>

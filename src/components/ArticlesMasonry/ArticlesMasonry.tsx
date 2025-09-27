@@ -1,17 +1,7 @@
 import styles from './ArticlesMasonry.module.css';
 import Masonry from 'react-masonry-css';
 import { useNavigate } from 'react-router-dom';
-import img1 from '../../assets/tortilla1.webp';
-import img2 from '../../assets/tortilla2.jpeg';
-
-const articles = [
-	{ id: '1', title: 'Historia de la Tortilla', image: img1 },
-	{ id: '2', title: 'Recetas Tradicionales', image: img2 },
-	{ id: '3', title: 'Tortillas Modernas', image: img1 },
-	{ id: '4', title: 'Ingredientes Clave', image: img2 },
-	{ id: '5', title: 'La tortilla sin cebolla', image: img1 },
-	{ id: '6', title: 'Tortilla y vino', image: img2 },
-];
+import {articles} from '../../data/articles'
 
 export const ArticlesMasonry: React.FC = () => {
 	const navigate = useNavigate();
