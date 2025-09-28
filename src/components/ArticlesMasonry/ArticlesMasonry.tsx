@@ -1,12 +1,12 @@
 import styles from './ArticlesMasonry.module.css';
 import Masonry from 'react-masonry-css';
 import { useNavigate } from 'react-router-dom';
-import {articles} from '../../data/articles'
+import { articles } from '../../data/articles';
 
 export const ArticlesMasonry: React.FC = () => {
 	const navigate = useNavigate();
 
-	const goToArticle = (id: string) => {
+	const goToArticle = (id: number) => {
 		navigate(`/articulo/${id}`);
 	};
 
