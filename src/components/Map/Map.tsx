@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { articles } from '../../data/articles';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
@@ -14,6 +14,7 @@ const customIcon = new L.Icon({
 
 export const Map = () => {
 	const [visiblePlaces, setVisiblePlaces] = useState(articles);
+	const visiblePlacesRef = useRef(articles);
 
 	// Componente auxiliar que escucha cambios en el mapa
 	const MapEventHandler = () => {
@@ -28,7 +29,18 @@ export const Map = () => {
 						item.location.longitude,
 					]),
 				);
-				setVisiblePlaces(filtered);
+
+				const isEqual =
+					filtered.length === visiblePlacesRef.current.length &&
+					filtered.every(
+						(item, index) =>
+							item.id === visiblePlacesRef.current[index].id,
+					);
+
+				if (!isEqual) {
+					visiblePlacesRef.current = filtered;
+					setVisiblePlaces(filtered);
+				}
 			};
 
 			updateVisible(); // inicial
