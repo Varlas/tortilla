@@ -55,10 +55,10 @@ export const Map = () => {
 	};
 
 	return (
-		<div className="flex gap-4">
+		<div>
 			{/* Mapa */}
-			<div className="w-2/3">
-				<h1 className="text-xl font-bold mb-2">Mapa de Artículos</h1>
+			<div>
+				<h1>Mapa de Artículos</h1>
 				<MapContainer
 					center={[43.4623, -3.80998]}
 					zoom={14}
@@ -99,23 +99,16 @@ export const Map = () => {
 			</div>
 
 			{/* Listado dinámico */}
-			<div className="w-1/3 overflow-y-auto max-h-[500px] pr-2">
-				<h2 className="text-xl font-bold mb-2">Sitios visibles</h2>
+			<div>
+				<h2>Sitios visibles</h2>
 				{visiblePlaces.length > 0 ? (
-					<ul className="space-y-4">
+					<ul>
 						{visiblePlaces.map((p) => (
-							<li
-								key={p.id}
-								className="border rounded-lg p-2 shadow-sm"
-							>
-								{p.title}
-							</li>
+							<li key={p.id}>{p.title}</li>
 						))}
 					</ul>
 				) : (
-					<p className="text-gray-500">
-						No hay sitios en esta vista.
-					</p>
+					<p>No hay sitios en esta vista.</p>
 				)}
 			</div>
 		</div>
