@@ -3,6 +3,7 @@ import { articles } from '../../data/articles';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import RestaurantEntry from '../RestaurantEntry/RestaurantEntry';
 
 // Custom icon
 const customIcon = new L.Icon({
@@ -104,7 +105,14 @@ export const Map = () => {
 				{visiblePlaces.length > 0 ? (
 					<ul>
 						{visiblePlaces.map((p) => (
-							<li key={p.id}>{p.title}</li>
+							<li>
+								<RestaurantEntry
+									title={p.title}
+									description={p.description}
+									adress={p.adress}
+									id={p.id}
+								/>
+							</li>
 						))}
 					</ul>
 				) : (
