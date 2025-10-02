@@ -13,3 +13,31 @@
   font-size: clamp(1.5rem, 2.5vw, 2rem);
   color: #333;
 }
+
+.map-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.map-wrapper {
+  flex: 2;
+}
+
+.map {
+  height: 500px;
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.list-wrapper {
+  flex: 1;
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  background-color: #f9f9f9; /* opcional, para que resalte */
+}
+

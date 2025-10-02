@@ -15,9 +15,13 @@ export const Ranking = () => {
 	return (
 		<div className="ranking">
 			<h1>Ranking de Tortillas</h1>
+			<p>
+				En este punto recogemos las que para nosotros son las mejores
+				tortillas. Aquellas que merece la pena acercarte a probar.
+			</p>
 			<ul>
-				{places.map((rest, index) => (
-					<li key={index}>
+				{places.map((rest) => (
+					<li key={rest.id}>
 						<RestaurantEntry
 							title={rest.title}
 							description={rest.description}

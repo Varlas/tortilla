@@ -17,13 +17,15 @@ function RestaurantEntry(props: Props) {
 
 	const { description, adress, title, id } = props;
 	return (
-		<div>
-			<div className="rankingInfo">
+		<div className="entry">
+			<div className="entryInfo">
 				<h2>{title}</h2>
 				<p className="desc">{description}</p>
 				<p className="dir">{adress}</p>
 			</div>
-			<div onClick={() => goToArticle(id)}>Ir al artículo</div>
+			<button className="button" onClick={() => goToArticle(id)}>
+				Ir al artículo
+			</button>
 		</div>
 	);
 }
